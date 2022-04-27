@@ -19,3 +19,9 @@ jobs:
      with:
        sanitizer: ${{ matrix.sanitizer }}
        upload-build: true
+       
+   - name: Scan Report
+     uses: actions/upload-artifact@v2
+     with:
+         name: scan-report
+         path: 'report.html'
